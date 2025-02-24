@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('/assets/fonts/static/Figtree-ExtraBold.ttf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/static/Figtree-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-figtree);
+    height: 100%;
+    background-color: var(--clr-background);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display:flex;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root{
+    --ff-figtree: Figtree, sans-serif;
+
+    --fw-bold: 800;
+    --fw-light: 500;
+
+    --fs-paragraph: 16px;
+
+    --clr-background: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lightgrey: hsl(0, 0%, 42%);
+    --clr-black: hsl(0, 0%, 7%);
+}
+
+.tiny-card{
+    background-color: var(--clr-background);
+    display: inline-block;
+    padding: 0.35rem;
+}
+
+.avatar-container{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card{
+    display: inline-flex;
+    flex-direction: column;
+    background-color: var(--clr-white);
+}
